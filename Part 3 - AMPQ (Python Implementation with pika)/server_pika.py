@@ -33,11 +33,11 @@ class server_side:
 
         print(' [x] Awaiting RPC Requests.....')
         self.connection = pika.BlockingConnection(pika.ConnectionParameters(
-            'dove.rmq.cloudamqp.com',
-            5672,
-            'hlnxvzxs',
-            pika.PlainCredentials('hlnxvzxs', 
-            'Vx5dzCFmvkEclRNvHN7nYDgLN2yA6IYf')))  
+            'YOUR_HOST_NAME',
+            YOUR_PORT,
+            'YOUR_VIRTUAL_HOST_NAME',
+            pika.PlainCredentials('YOUR_USER_NAME', 
+            'YOUR_PASS_WORD')))  
         self.channel = self.connection.channel()
 
         print('*********Decalring Queues on channel**********')
